@@ -67,7 +67,21 @@
 
 ### Решение 1. Установка MicroK8S
 
-![]()
+Установка по приложенным командам прошла успешно. На скриншоте выполнил команду по включению Dashboard:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-01-01-hw.png)
+
+microk8s status:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-01-02-hw.png)
+
+Добавил внешний IP в файл с данными для формирования сертификатов:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-01-03-hw.png)
+
+Обновил сертификаты:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-01-04-hw.png)
 
 ------
 
@@ -78,7 +92,25 @@
 
 ### Решение 2. Установка и настройка локального kubectl
 
+Создал файл config со следующим содержимым:
 
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-02-04-hw.png)
+
+Отображение данных при обращении в браузере к внешнему IP адресу и порту:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-02-01-hw.png)
+
+kubectl get nodes:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-02-02-hw.png)
+
+У меня так и никак не получилось пробросить port-forward ни локально, ни внешне. И имя дашборда ставил из полученного через команду kubectl describe nodes compute-vm-2-2-20-hdd-1726210684419 - и так не вышло:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-02-03-hw.png)
+
+kubectl describe nodes compute-vm-2-2-20-hdd-1726210684419:
+
+![](https://github.com/artmur1/22-01-k8s-kubectl/blob/main/img/22-01-02-05-hw.png)
 
 ------
 
